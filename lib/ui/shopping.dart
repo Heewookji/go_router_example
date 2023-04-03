@@ -28,6 +28,7 @@
  * THE SOFTWARE.
  */
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../constants.dart';
 
@@ -45,7 +46,7 @@ class Shopping extends StatelessWidget {
             title: Text(items[index]),
             onTap: () {
               final value = items[index];
-              // TODO: Add Push Details Route
+              context.goNamed(detailsRouteName, params: {'item': value});
             },
           );
         },

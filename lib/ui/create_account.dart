@@ -28,9 +28,10 @@
  * THE SOFTWARE.
  */
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:navigation/constants.dart';
 import 'package:provider/provider.dart';
 
-import '../constants.dart';
 import '../login_state.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -140,7 +141,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           ),
                         ),
                         onPressed: () {
-                          // TODO: Add Login Route
+                          context.goNamed(loginRouteName);
                         },
                         child: const Text('Cancel'),
                       ),

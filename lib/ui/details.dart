@@ -28,8 +28,11 @@
  * THE SOFTWARE.
  */
 import 'package:flutter/material.dart';
-import '../cart_holder.dart';
+import 'package:go_router/go_router.dart';
+import 'package:navigation/constants.dart';
 import 'package:provider/provider.dart';
+
+import '../cart_holder.dart';
 
 class Details extends StatelessWidget {
   final String description;
@@ -70,8 +73,8 @@ class Details extends StatelessWidget {
               onPressed: () {
                 Provider.of<CartHolder>(context, listen: false)
                     .addItem(description);
-		    // TODO: Add Root Route
-               },
+                context.goNamed(rootRouteName);
+              },
               child: const Text(
                 'Add To Cart',
                 style: TextStyle(color: Colors.white),

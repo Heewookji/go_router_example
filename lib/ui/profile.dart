@@ -28,6 +28,7 @@
  * THE SOFTWARE.
  */
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../constants.dart';
 
@@ -71,7 +72,7 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // TODO: Add Personal Page Route
+                context.goNamed(personalRouteName);
               },
             ),
           ),
@@ -87,7 +88,7 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // TODO: Add Payment Route
+                context.goNamed(paymentRouteName);
               },
             ),
           ),
@@ -103,7 +104,7 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                // TODO: Add Signin Info Route
+                context.goNamed(signinInfoRouteName);
               },
             ),
           ),
@@ -119,7 +120,7 @@ class _ProfileState extends State<Profile> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           onTap: () {
-            // TODO: Add More Info Route
+            context.goNamed(moreInfoRouteName);
           },
         ),
       ),
